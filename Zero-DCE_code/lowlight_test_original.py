@@ -4,7 +4,7 @@ import torch.optim
 import os
 
 import model
-import time
+
 from PIL import Image
 import glob
 import time
@@ -61,19 +61,14 @@ def lowlight(image_path):
 
     DCE_net = model.enhance_net_nopool().cuda()
     DCE_net.load_state_dict(
-        torch.load('/media/ivan/Ivan/Final Applied CV/Zero-DCE-master/Zero-DCE_code/snapshots/Epoch149.pth'))
+        torch.load('/media/ivan/Ivan/Final Applied CV/Zero-DCE-master/Zero-DCE_code/snapshots/Original.pth'))
     start = time.time()
     _, enhanced_image, _ = DCE_net(data_lowlight)
 
     end_time = (time.time() - start)
     print(end_time)
-    image_path = image_path.replace('original', 'result')
-    result_path = image_path
-    print(result_path)
-    if not os.path.exists(image_path.replace('/' + image_path.split("/")[-1], '')):
-        os.makedirs(image_path.replace('/' + image_path.split("/")[-1], ''))
-
-    torchvision.utils.save_image(enhanced_image, result_path)
+    path_zero = "/media/ivan/Ivan/Final Applied CV/images/result/test_img/capt_prev.jpg"
+    torchvision.utils.save_image(enhanced_image, path_zero)
 
 
 if __name__ == '__main__':
@@ -89,28 +84,22 @@ if __name__ == '__main__':
                 # image = image
                 print(image)
                 lowlight(image)
-                path_zero="/media/ivan/Ivan/Final Applied CV/images/result/test_img/capt.jpg"
+                path_zero="/media/ivan/Ivan/Final Applied CV/images/result/test_img/capt_prev.jpg"
                 img = cv2.imread(path_zero)
                 out = simplest_cb(img, 5)
-                correct_path="/media/ivan/Ivan/Final Applied CV/images/result/test_img/correct.jpg"
+                correct_path="/media/ivan/Ivan/Final Applied CV/images/result/test_img/correct_prev.jpg"
                 cv2.imwrite(correct_path, out)
                 print("Correct written")
 
                 img = cv2.imread(correct_path)
                 img2 = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) / 255
 
-                start_wavelet=time.time()
-
                 denoise_img_wavelet = np.uint8(denoise_wavelet(img2, multichannel=True, rescale_sigma=True) * 255)
-                wavelet_path="/media/ivan/Ivan/Final Applied CV/images/result/test_img/wavelet.jpg"
+                wavelet_path="/media/ivan/Ivan/Final Applied CV/images/result/test_img/wavelet_prev.jpg"
                 cv2.imwrite(wavelet_path, cv2.cvtColor(denoise_img_wavelet, cv2.COLOR_RGB2BGR))
-                print("Denoise wavelet written,time: ", time.time()-start_wavelet)
-
-
-                start_opencv=time.time()
-
+                print("Denoise wavelet written")
 
                 dst = cv2.fastNlMeansDenoisingColored(img, None, 5, 5, 3, 15)
-                opencv_path="/media/ivan/Ivan/Final Applied CV/images/result/test_img/opencv.jpg"
+                opencv_path="/media/ivan/Ivan/Final Applied CV/images/result/test_img/opencv_prev.jpg"
                 cv2.imwrite(opencv_path, dst)
-                print("Denoise opencv written,time: ", time.time()-start_opencv)
+                print("Denoise opencv written")

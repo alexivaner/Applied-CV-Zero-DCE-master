@@ -104,7 +104,7 @@ if __name__ == "__main__":
 	parser.add_argument('--snapshot_iter', type=int, default=10)
 	parser.add_argument('--snapshots_folder', type=str, default="snapshots/")
 	parser.add_argument('--load_pretrain', type=bool, default= False)
-	parser.add_argument('--pretrain_dir', type=str, default= "snapshots/Epoch99.pth")
+	parser.add_argument('--pretrain_dir', type=str, default= "snapshots/Original.pth")
 
 	config = parser.parse_args()
 

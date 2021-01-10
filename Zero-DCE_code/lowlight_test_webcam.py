@@ -1,20 +1,15 @@
 import torch
-import torch.nn as nn
-import torchvision
-import torch.backends.cudnn as cudnn
+
 import torch.optim
 import os
-import sys
-import argparse
-import time
-import dataloader
 import model
-import numpy as np
 from torchvision import transforms
 from PIL import Image
 import time
 import cv2
 import numpy as np
+from skimage.restoration import (denoise_tv_chambolle, denoise_bilateral,
+                                 denoise_wavelet, estimate_sigma)
 unloader = transforms.ToPILImage()
 
 '''Good blog that explain convert image to tensor etc
@@ -75,7 +70,7 @@ def lowlight(data_lowlight):
 
     DCE_net = model.enhance_net_nopool().cuda()
     DCE_net.load_state_dict(
-        torch.load('/media/ivan/Ivan/Final Applied CV/Zero-DCE-master/Zero-DCE_code/snapshots/Epoch99.pth'))
+        torch.load('/media/ivan/Ivan/Final Applied CV/Zero-DCE-master/Zero-DCE_code/snapshots/Epoch149.pth'))
     start = time.time()
     _, enhanced_image, _ = DCE_net(data_lowlight)
     enhanced_image = tensor_to_PIL(enhanced_image)
@@ -89,10 +84,14 @@ def lowlight(data_lowlight):
 
 if __name__ == '__main__':
     # test_images
-    mirror=1
-    path="udp://127.0.0.1:8081"
+    camera_source=-1
+    if camera_source==0:
+        mirror = 1
+    else:
+        mirror=0
+    # path="udp://127.0.0.1:8081"
     with torch.no_grad():
-        cam = cv2.VideoCapture(path)
+        cam = cv2.VideoCapture(camera_source)
         while True:
             ret_val, img = cam.read()
             if mirror:
@@ -101,13 +100,17 @@ if __name__ == '__main__':
             result1 = lowlight(img)
             result1 = np.asarray(result1) #Convert back to OpenCV
             result1 = result1[:, :, ::-1].copy()
-            print(result1.shape)
 
-            result2 = simplest_cb(result1, 5)
+
+            result2 = simplest_cb(result1, 0.5)
+
+            result3= np.uint8(denoise_wavelet(result2, multichannel=True, rescale_sigma=True) * 255)
+            # result3 = cv2.fastNlMeansDenoisingColored(result2, None, 5, 5, 3, 15)
 
             cv2.imshow('Original', img) #SHow original Image
             cv2.imshow('Zero DCE', result1) #Show Zero DCE Only
             cv2.imshow('Zero DCE+CB', result2) #Show Zero DCE Only
+            cv2.imshow('Zero DCE+Wavelet', result3) #Show Zero DCE Only
 
             if cv2.waitKey(1) == 27:
                 break  # esc to quit
