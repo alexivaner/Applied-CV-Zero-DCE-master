@@ -37,7 +37,7 @@ Zero-DCE is a novel method to do light enhancement in an image. We could obtain 
 
 <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br>
 
-### Our Result
+# Our Result
 
 ## Images
 * ED = Extended Dataset (With our dataset + SICE Dataset part 2)
@@ -47,10 +47,10 @@ Zero-DCE is a novel method to do light enhancement in an image. We could obtain 
 
 | Original Images | ZeroDCE | ZeroDCE+ED+CC+D (Ours) |
 | ------------- | ------------- | ------------- |
-| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |
-| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |
-| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |
-| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |
+| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20191215_170729Ori.jpg" width="500"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20191215_170729.jpg" width="500"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20191215_170729_correct_denoise_opencv.jpg" width="500"><br> |
+| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/3Ori.jpg" width="500"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/3.jpg" width="500"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/3_correct_denoise_opencv.jpg" width="500"><br> |
+| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20201228_182159Ori.jpg" width="500"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20201228_182159.jpg" width="500"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20201228_182159_correct_denoise_opencv.jpg" width="500"><br> |
+| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20191215_173105Ori.jpg" width="500"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20191215_173105.jpg" width="500"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20191215_173105_correct_denoise_opencv.jpg" width="500"><br> |
 
 
 #### Comparison in Confussion Matrices:
