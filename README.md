@@ -148,36 +148,34 @@ After everything already setup:
 
 
 
-### Training Resnet Modified for High SNR Signal
-* Go to Submission folder: <br>
- `cd Submission` <br>
-* Run Jupyter Notebook: <br>
- `jupyter notebook` <br>
-* Open "Classification-proposed-model-resnet-modified-highest.ipynb": <br>
+### Training Zero-DCE
+* Go to Zero-DCE_code folder: <br>
+ `cd Zero-DCE_code` <br>
+* Do not forget to edit the path from lowlight_train.py
+* Run lowlight_train.py: <br>
+ `python lowlight_train` <br>
 
 
 ## Full Proposal
 Please download our full proposal here:<br>
-[Full Proposal](https://github.com/alexivaner/Deep-Learning-Based-Radio-Signal-Classification/raw/main/Submission/Proposal/Proposal_Team3_Farhan%20Tandia_Ivan%20Surya%20H.pdf)
+[Full Proposal](https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/Final%20Applied%20CV%20Proposal.pdf)
 
 ## Full Final Explanation Report
 Please download our full final report here:<br>
-[Full Report](https://github.com/alexivaner/Deep-Learning-Based-Radio-Signal-Classification/raw/main/Submission/Final/Final_Team13_Farhan%20Tandia_Ivan%20Surya%20H.pdf)
+[Full Report](https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/Final%20Applied%20CV%20Final%20Result.pdf)
 
 ## Disclaimer
-Please cite us as autho, our GitHub, and Original's Zero DCE repository if you plan to use this as your next research or any paper.<br>
+Please cite us as authors, our GitHub, and Original's Zero DCE repository if you plan to use this as your next research or any paper.<br>
 
 # Reference
 <pre>
-T. J. O’Shea, T. Roy and T. C. Clancy, "Over-the-Air Deep Learning Based Radio Signal Classification," in IEEE Journal of Selected Topics in Signal Processing, vol. 12, no. 1, pp. 168-179, Feb. 2018, doi: 10.1109/JSTSP.2018.2797022.<br>
+Guo, Chunle, et al. "Zero-Reference Deep Curve Estimation for Low-Light Image Enhancement." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.
 
-Harper, Clayton A., et al. "Enhanced Automatic Modulation Classification using Deep Convolutional Latent Space Pooling." ASILOMAR Conference on Signals, Systems, and Computers.  2020. <br>
+Zer-DCE Github Page - https://li-chongyi.github.io/Proj_Zero-DCE.html<br>
 
-Vaswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones, L.; Gomez, A. N.; Kaiser, Ł. & Polosukhin, I. (2017), Attention is all you need, in 'Advances in Neural Information Processing Systems' , pp. 5998--6008 . <br>
+Color Balance - https://web.stanford.edu/~sujason/ColorBalancing/simplestcb.html<br>
 
-J. Uppal, M. Hegarty, W. Haftel, P. A. Sallee, H. Brown Cribbs and H. H. Huang, "High-Performance Deep Learning Classification for Radio Signals," 2019 53rd Asilomar Conference on Signals, Systems, and Computers, Pacific Grove, CA, USA, 2019, pp. 1026-1029, doi: 10.1109/IEEECONF44664.2019.9048897. <br>
+OpenCV Denoise - https://docs.opencv.org/3.4/d5/d69/tutorial_py_non_local_means.html<br>
 
-S. Huang et al., "Automatic Modulation Classification Using Compressive Convolutional Neural Network," in IEEE Access, vol. 7, pp. 79636-79643, 2019, DOI: 10.1109/ACCESS.2019.2921988. <br>
-
-Huynh-The, Thien & Hua, Cam-Hao & Pham, Quoc-Viet & Kim, Dong-Seong. (2020). MCNet: An Efficient CNN Architecture for Robust Automatic Modulation Classification. IEEE Communications Letters. 24. 811-815. 10.1109/LCOMM.2020.2968030. <br>
+<br>
 </pre>
