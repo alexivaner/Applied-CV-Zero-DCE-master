@@ -119,7 +119,7 @@ After Node-RED Installed:
 After everything is ready, you need to set httpstatic in Node-RED so our Node-RED can access our folder:
 * Change configuration in setting.js, for me the command will be like this: <br>
 `sudo nano /home/ivan/.node-red/settings.js`, change "ivan" with your username
-* Uncomment httpStatic and replace wtih path for "images" folder in our repos, for example:
+* Uncomment httpStatic and replace wtih path for "images" folder in our repos, for example:<br>
 `
   // When httpAdminRoot is used to move the UI to a different root path, the
     // following property can be used to identify a directory of static content
@@ -176,6 +176,5 @@ Zer-DCE Github Page - https://li-chongyi.github.io/Proj_Zero-DCE.html<br>
 Color Balance - https://web.stanford.edu/~sujason/ColorBalancing/simplestcb.html<br>
 
 OpenCV Denoise - https://docs.opencv.org/3.4/d5/d69/tutorial_py_non_local_means.html<br>
-
 <br>
 </pre>
