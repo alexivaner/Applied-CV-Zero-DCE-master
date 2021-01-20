@@ -24,14 +24,14 @@
 Zero-DCE is a novel method to do light enhancement in an image. We could obtain do light enhancement in image while keep maintain the detail and preserves quality of the image. Enhancement may also recover the object detection or recognition in the low-light area. Zero-DCE does not require any paired or unpaired data in the training process as in existing CNN-Based because It using non-reference loss functions. It is said that Zero-DCE supersedes State-of-the-Arts. It is capable of processing images in real-time (about 500 FPS for images of size 640x480x3 on GPU) hence we would to do real implementation of Zero-DCE, in this case implement it using DSLR camera and some input images and videos.
 
 # Goals and Proposed Method
-<img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Our%20Improvement.jpg" width="700"><br>
+<img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Our%20Improvement.jpg" width="1000"><br>
 
 * Previous Zero-DCE not really has correct color, we aim to do color correction for Zero-DCE.
 * If the input image already has some noise, Zero-DCE result will also has some noise, hence we would to improve the result by doing denoising at the output.
 * We add second part of SICE dataset and also our own dataset then retrain previous Zero-DCE model to get improvement in the result.
-All of improvement above is to make sure that we could use Zero-DCE for real-purpose, hence we also combine our demo with DSLR camera using NodeRED, you could see our proposed method below:<br>
+<br>All of improvement above is to make sure that we could use Zero-DCE for real-purpose, hence we also combine our demo with DSLR camera using NodeRED, you could see our proposed method below:<br>
 
-<img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="700"><br>
+<img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br>
 
 
 
