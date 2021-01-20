@@ -53,6 +53,13 @@ Zero-DCE is a novel method to do light enhancement in an image. We could obtain 
 | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20191215_173105Ori.jpg" width="400"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20191215_173105.jpg" width="400"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/P_20191215_173105_correct_denoise_opencv.jpg" width="400"><br> |
 
 
+## Videos
+| Original Videos | Ours |
+| ------------- | ------------- |
+| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/before1.gif" width="400"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/after1.gif" width="400"><br> | 
+| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/before2.gif" width="400"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/after2.gif" width="400"><br> | 
+
+
 #### Comparison in Confussion Matrices:
 We could see that we got very good confussion matrices even in the Low SNR Signal
 <img src="https://github.com/alexivaner/Deep-Learning-Based-Radio-Signal-Classification/raw/main/Submission/Final/Comparison.gif" width="600"><br>
