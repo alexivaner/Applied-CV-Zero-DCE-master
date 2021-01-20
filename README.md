@@ -4,13 +4,7 @@
  *Best Demo Award in Applied Computer Vision 2020 (Fall 2020)*<br>
  
  Implementation from previous works:<br>
- @Article{Zero-DCE,
-          author = {Guo, Chunle and Li, Chongyi and Guo, Jichang and Loy, Chen Change and Hou, Junhui and Kwong, Sam and Cong Runmin},
-          title = {Zero-reference deep curve estimation for low-light image enhancement},
-          journal = {CVPR},
-          pape={1780-1789},
-          year = {2020}
-          }
+CVPR-2020 Zero-DCE Paper click [here](https://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Zero-Reference_Deep_Curve_Estimation_for_Low-Light_Image_Enhancement_CVPR_2020_paper.pdf)<br>
           
  
  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Photo%20result.jpg" width="800"><br>
