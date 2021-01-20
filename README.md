@@ -39,8 +39,8 @@ Zero-DCE is a novel method to do light enhancement in an image. We could obtain 
 
 # Our Result
 
-## Inference using DSLR Camera with NodeRED as interface:
-<img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Screenshot from 2021-01-20 20-12-33.png" width="400"> 
+## Real Time Inference using DSLR Camera:
+<img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Screenshot from 2021-01-20 20-12-33.png" width="1000"> 
 
 ## Images
 * ED = Extended Dataset (With our dataset + SICE Dataset part 2)
@@ -77,10 +77,7 @@ We also take our own dataset, We add  around 190 Photos, with 38 Different Scene
     │   ├── snapshots
     │   ├── ...
     ├── <font color="#3465A4"><b>Tools</b></font>
-    │   ├── part0.h5
-    │   ├── part1.h5
-    │   ├── part2.h5
-    │   ├── ....
+    │   ├── Crop Image.ipynb
     ├── <font color="#3465A4"><b>....</b></font>
 
 </pre>
@@ -110,8 +107,44 @@ We also take our own dataset, We add  around 190 Photos, with 38 Different Scene
  
 #### Testing using DSLR Camera
 If you want to inference using DSLR Camera, make sure you install the requirement below:
-* Node-RED
-* gPhoto2 Library
+* Node-RED (click [here](https://nodered.org/docs/getting-started/local) for installation)
+* gPhoto2 Library (click [here](https://zoomadmin.com/HowToInstall/UbuntuPackage/gphoto2) for installation)
+
+After Node-RED Installed:
+* Run `node-red-start` in the terminal
+* Visit http://127.0.0.1:1880/ in your browser
+* Click hamburger menu in the top-right corner, then go to manage palette, click palette, click install
+* Find and Install Node-RED dashboard and blynk
+
+After everything is ready, you need to set httpstatic in Node-RED so our Node-RED can access our folder:
+* Change configuration in setting.js, for me the command will be like this: <br>
+`sudo nano /home/ivan/.node-red/settings.js`, change "ivan" with your username
+* Uncomment httpStatic and replace wtih path for "images" folder in our repos, for example:
+`
+  // When httpAdminRoot is used to move the UI to a different root path, the
+    // following property can be used to identify a directory of static content
+    // that should be served at http://localhost:1880/.
+    httpStatic: '/media/ivan/Ivan/Final Applied CV/Zero-DCE-master/images'
+`
+* Save the setting ctrl+x, press y, and press enter if you are using nano.
+* Restart Node-RED by run `node-red-stop` then `node-red-start`
+
+After set httpStatic, its time to import the flow:
+* Visit http://127.0.0.1:1880/ in your browser
+* Click hamburger menu in the top-right corner, then click import
+* Click `Select file to import`, choose `nodered_flow 14 Januari 2021.json`, then click import
+* Click Deploy in the right corner of NodeRED
+
+Now you should already see the interface of NodeRED-Dashboard with your browser:
+* Visit http://127.0.0.1:1880/ui in your browser and you should see some interfaces
+* Visit http://127.0.0.1:1880/ in your browser
+* You need to make sure all the path in 'capture camera','enhance image','watch for pic', and every 'timestamp' already refer to your correct path. Do not forget to change python path based on your anaconda environment path.
+* Do not forget to click 'Deploy' if you change something.
+
+After everything already setup:
+* Connect your DSLR Camera with USB Cable
+* Visit http://127.0.0.1:1880/ui in your browser and you should see some interfaces
+* Click 'Capture camera' and see if your camera already give some respond.
 
 
 
@@ -122,12 +155,6 @@ If you want to inference using DSLR Camera, make sure you install the requiremen
  `jupyter notebook` <br>
 * Open "Classification-proposed-model-resnet-modified-highest.ipynb": <br>
 
-### Training Transformer Model for Low SNR Signal
-* Go to Submission folder: <br>
- `cd Submission` <br>
-* Run Jupyter Notebook: <br>
- `jupyter notebook` <br>
-* Open "Classification-proposed-model-transformer-low.ipynb": <br>
 
 ## Full Proposal
 Please download our full proposal here:<br>
