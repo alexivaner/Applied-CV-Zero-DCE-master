@@ -3,7 +3,7 @@
  Final Project for Applied Computer Vision 2020 (Fall 2020) in National Chiao Tung University<br>
  *Best Demo Award in Applied Computer Vision 2020 (Fall 2020)*
  
- <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Photo%20result.jpg" width="500"><br>
+ <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Photo%20result.jpg" width="800"><br>
 
  ## Final Demo Course Reviewer
 [Min-Chun Hu - Multimedia Information System Lab - National Tsing Hua University](http://mislab.cs.nthu.edu.tw/)<br>
