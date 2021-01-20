@@ -2,15 +2,6 @@
 
  Final Project for Applied Computer Vision 2020 (Fall 2020) in National Chiao Tung University<br>
  *Best Demo Award in Applied Computer Vision 2020 (Fall 2020)*<br>
- 
-# Highlight
-We improve previous paper by implement it for real-time demo in DSLR camera and also add color correction and denoising to make the result is more suitable for real implementation. We continue the code from previous works:<br>
-* Find more about Zero-DCE click [here](https://li-chongyi.github.io/Proj_Zero-DCE.html)<br>
-* Original Zero-DCE Repository click  [here](https://github.com/Li-Chongyi/Zero-DCE)<br>
-* Paper CVPR-2020 Zero-DCE Paper click [here](https://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Zero-Reference_Deep_Curve_Estimation_for_Low-Light_Image_Enhancement_CVPR_2020_paper.pdf)<br>
-
-          
- <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Photo%20result.jpg" width="800"><br>
 
  ## Final Demo  Reviewer
 [Min-Chun Hu - Multimedia Information System Lab - National Tsing Hua University](http://mislab.cs.nthu.edu.tw/)<br>
@@ -24,8 +15,14 @@ We improve previous paper by implement it for real-time demo in DSLR camera and 
 ## Our Team
 [Farhan Tandia](https://github.com/farhantandia)<br>
 [Ivan Surya Hutomo](https://github.com/alexivaner)<br>
-[Martin Dominikus]()<br>
+[Martin Dominikus](https://github.com/mdtjan)<br>
 
+ 
+# Highlight
+We improve previous paper by implement it for real-time demo in DSLR camera and also add color correction and denoising to make the result is more suitable for real implementation. We continue the code from previous works:<br>
+* Find more about Zero-DCE click [here](https://li-chongyi.github.io/Proj_Zero-DCE.html)<br>
+* Original Zero-DCE Repository click  [here](https://github.com/Li-Chongyi/Zero-DCE)<br>
+* Paper CVPR-2020 Zero-DCE Paper click [here](https://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Zero-Reference_Deep_Curve_Estimation_for_Low-Light_Image_Enhancement_CVPR_2020_paper.pdf)<br>
 
 # Abstract
 Zero-DCE is a novel method to do light enhancement in an image. We could obtain do light enhancement in image while keep maintain the detail and preserves quality of the image. Enhancement may also recover the object detection or recognition in the low-light area. Zero-DCE does not require any paired or unpaired data in the training process as in existing CNN-Based because It using non-reference loss functions. It is said that Zero-DCE supersedes State-of-the-Arts. It is capable of processing images in real-time (about 500 FPS for images of size 640x480x3 on GPU) hence we would to do real implementation of Zero-DCE, in this case implement it using DSLR camera and some input images and videos.
@@ -40,13 +37,21 @@ Zero-DCE is a novel method to do light enhancement in an image. We could obtain 
 
 <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br>
 
+### Our Result
+
+## Images
+* ED = Extended Dataset (With our dataset + SICE Dataset part 2)
+* CC = Color Correction (Click [here](https://web.stanford.edu/~sujason/ColorBalancing/simplestcb.html#:~:text=In%20order%20to%20deal%20with,Values%20around%200.01%20are%20typical.) for more detail)
+* D = Denoise (Click [here](https://docs.opencv.org/3.4/d5/d69/tutorial_py_non_local_means.html) for more detail) <br>
 
 
+| Original Images | ZeroDCE | ZeroDCE+ED+CC+D (Ours) |
+| ------------- | ------------- | ------------- |
+| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |
+| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |
+| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |
+| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br> |
 
-
-### Our Result (Green Line)
-We could see that our result surpassed previous method a lot in Low SNR, from under 20% to more than 70% (We could see our result in green line surpassed baseline in Low SNR Signal) <br>
-<img src="https://github.com/alexivaner/Deep-Learning-Based-Radio-Signal-Classification/raw/main/Submission/Final/Comparison%202.gif" width="600"><br><br>
 
 #### Comparison in Confussion Matrices:
 We could see that we got very good confussion matrices even in the Low SNR Signal
