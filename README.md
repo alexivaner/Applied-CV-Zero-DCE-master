@@ -39,6 +39,9 @@ Zero-DCE is a novel method to do light enhancement in an image. We could obtain 
 
 # Our Result
 
+## Inference using DSLR Camera with NodeRED as interface:
+<img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Screenshot from 2021-01-20 20-12-33.png" width="400"> 
+
 ## Images
 * ED = Extended Dataset (With our dataset + SICE Dataset part 2)
 * CC = Color Correction (Click [here](https://web.stanford.edu/~sujason/ColorBalancing/simplestcb.html#:~:text=In%20order%20to%20deal%20with,Values%20around%200.01%20are%20typical.) for more detail)
@@ -54,49 +57,64 @@ Zero-DCE is a novel method to do light enhancement in an image. We could obtain 
 
 
 ## Videos
-| Original Videos | Ours |
-| ------------- | ------------- |
-| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/before1.gif" width="400"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/after1.gif" width="400"><br> | 
-| <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/before2.gif" width="400"> | <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/after2.gif" width="400"><br> | 
-
-
-#### Comparison in Confussion Matrices:
-We could see that we got very good confussion matrices even in the Low SNR Signal
-<img src="https://github.com/alexivaner/Deep-Learning-Based-Radio-Signal-Classification/raw/main/Submission/Final/Comparison.gif" width="600"><br>
+<img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/video_compare.gif" width="400">
 
 # How to Run
 You could run the program by following steps::<br>
 ### Clone the repository:<br>
- `git clone https://github.com/alexivaner/Deep-Learning-Based-Radio-Signal-Classification.git` <br><br>
+ `git clone https://github.com/alexivaner/Applied-CV-Zero-DCE-master/` <br><br>
  
-### Download the Weight and Dataset:
-* Download weights [here](https://drive.google.com/drive/folders/1RIjrZaKJW8oCLbd5LANvTqemk8f-1uWK?usp=sharing) <br>
-* Extract all weights to "Submission" folder <br>
-* Download extracted dataset [here](https://drive.google.com/file/d/1gUPDlvPqCnb_C4k2h3st0JV9p_sSvaiI/view?usp=sharing)<br>
-Our dataset is originally taken from DEEPSIG DATASET: RADIOML 2018.01A (NEW), if you want to know more, you can click [here](https://www.deepsig.ai/datasets)<br>
-* Create new folder and name it "ExtractDataset", extract all the dataset and put on that folder, the folder structure will be like below:
+### Download the and Dataset:
+* Download dataset [here](https://drive.google.com/file/d/1S2yJEgUKCMJxLTZqcQwoxpuuvaA-OD93/view?usp=sharing)<br>
+Our dataset is originally taken from SICE DATASET, if you want to know more, you can click [here](https://github.com/csjcai/SICE)<br>
+We also take our own dataset, We add  around 190 Photos, with 38 Different Scenes inside NCTU Campus. Photos are taken using Nikon D5300 and Fujifilm XT-100
+* After download the dataset, extract the "data" inside dataset to Zero-DCE-master/Zero-DCE_code dolder, so the structure of folder will be like this:
   
 <pre>
-└── <font color="#3465A4"><b>Deep-Learning-Based-Radio-Signal-Classification</b></font>
-    ├── <font color="#3465A4"><b>Submission</b></font>
-    │   ├── resnet_model_mix.h5
-    │   ├── trafo_model.data-00000-of-00001
-    │   ├── trafo_model.index
+└── <font color="#3465A4"><b>Zerp-DCE-master</b></font>
+    ├── <font color="#3465A4"><b>Zero-DCE_code</b></font>
+    │   ├── data
+    │   ├── snapshots
     │   ├── ...
-    ├── <font color="#3465A4"><b>ExtractDataset</b></font>
+    ├── <font color="#3465A4"><b>Tools</b></font>
     │   ├── part0.h5
     │   ├── part1.h5
     │   ├── part2.h5
     │   ├── ....
+    ├── <font color="#3465A4"><b>....</b></font>
+
 </pre>
  
-### Inference and Evaluate
-* Go to Submission folder: <br>
- `cd Submission` <br>
-* Run Jupyter Notebook: <br>
- `jupyter notebook` <br>
-* Open "Evaluate-Benchmark.ipnyb": <br>
+ ### Install Environment using Conda
+ We already provide environment file in this repository to make sure the installation is easy: <br>
+ * Go to Zero-DCE-master folder: <br>
+ `cd Zero-DCE-master` <br>
+ * Make sure you have anaconda in your pc
+* Run this command to install environment using conda: <br>
+ `conda env create -f Zero-DECE-master.yml` <br>
  
+ 
+### Inference and Evaluate
+#### Webcam
+* Go to Zero-DCE_code folder: <br>
+ `cd Zero-DCE_code` <br>
+* Run lowlight_test_webcam.py: <br>
+ `python lowlight_test_webcam.py` <br>
+ 
+#### Testing Image/VIdeo
+* Go to Zero-DCE_code folder: <br>
+ `cd Zero-DCE_code` <br>
+* Do not forget to edit the path in line 180 of lowlight_test_file.py
+* Run lowlight_test_file.py: <br>
+ `python llowlight_test_file.py` <br>
+ 
+#### Testing using DSLR Camera
+If you want to inference using DSLR Camera, make sure you install the requirement below:
+* Node-RED
+* gPhoto2 Library
+
+
+
 ### Training Resnet Modified for High SNR Signal
 * Go to Submission folder: <br>
  `cd Submission` <br>
@@ -121,8 +139,6 @@ Please download our full final report here:<br>
 
 ## Disclaimer
 Please cite us as autho, our GitHub, and Original's Zero DCE repository if you plan to use this as your next research or any paper.<br>
-
-
 
 # Reference
 <pre>
