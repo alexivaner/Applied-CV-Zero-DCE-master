@@ -29,17 +29,17 @@ Zero-DCE is a novel method to do light enhancement in an image. We could obtain 
 * Previous Zero-DCE not really has correct color, we aim to do color correction for Zero-DCE.
 * If the input image already has some noise, Zero-DCE result will also has some noise, hence we would to improve the result by doing denoising at the output.
 * We add second part of SICE dataset and also our own dataset then retrain previous Zero-DCE model to get improvement in the result.
-<br>All of improvement above is to make sure that we could use Zero-DCE for real-purpose, hence we also combine our demo with DSLR camera using NodeRED, you could see our proposed method below:<br>
+<br><br>All of improvement above is to make sure that we could use Zero-DCE for real-purpose, hence we also combine our demo with DSLR camera using NodeRED, you could see our proposed method below:<br>
 
 <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="1000"><br>
 
 
 
 # Highlight
-We improve previous paper by implement it for real-time demo in DSLR camera and also add color correction and denoising to make the result is more suitable for real implementation.<br>
-Find more about Zero-DCE click [here](https://li-chongyi.github.io/Proj_Zero-DCE.html)<br>
-Original Zero-DCE Repository click  [here](https://github.com/Li-Chongyi/Zero-DCE)<br>
-Previous repository did not use for real implementation, hence we try to use Zero-DCE in real implementation for example DSLR Camera.
+We improve previous paper by implement it for real-time demo in DSLR camera and also add color correction and denoising to make the result is more suitable for real implementation. We continue the code from previous works:<br>
+* Find more about Zero-DCE click [here](https://li-chongyi.github.io/Proj_Zero-DCE.html)<br>
+* Original Zero-DCE Repository click  [here](https://github.com/Li-Chongyi/Zero-DCE)<br>
+* Paper CVPR-2020 Zero-DCE Paper click [here](https://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Zero-Reference_Deep_Curve_Estimation_for_Low-Light_Image_Enhancement_CVPR_2020_paper.pdf)<br>
 
 
 ### Our Result (Green Line)
