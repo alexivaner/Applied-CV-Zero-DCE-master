@@ -5,7 +5,7 @@
  
  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Photo%20result.jpg" width="800"><br>
 
- ## Final Demo Course Reviewer
+ ## Final Demo  Reviewer
 [Min-Chun Hu - Multimedia Information System Lab - National Tsing Hua University](http://mislab.cs.nthu.edu.tw/)<br>
 [Yi-Ping Chao - Chang Gung University](https://scholar.google.com/citations?user=PWIYaX8AAAAJ&hl=en)<br>
 [Norman Wu - Garmin Corporation](https://www.linkedin.com/in/norman-wu-70078b97/?originalSubdomain=tw)<br>
@@ -14,7 +14,7 @@
 [Wen-Huang Cheng - AIMM Lab - NCTU](http://aimmlab.nctu.edu.tw/member.html)<br>
 
 
-## Contributors of Codes
+## Our Team
 [Farhan Tandia](https://github.com/farhantandia)<br>
 [Ivan Surya Hutomo](https://github.com/alexivaner)<br>
 [Martin Dominikus]()<br>
@@ -23,15 +23,16 @@
 # Abstract
 Zero-DCE is a novel method to do light enhancement in an image. We could obtain do light enhancement in image while keep maintain the detail and preserves quality of the image. Enhancement may also recover the object detection or recognition in the low-light area. Zero-DCE does not require any paired or unpaired data in the training process as in existing CNN-Based because It using non-reference loss functions. It is said that Zero-DCE supersedes State-of-the-Arts. It is capable of processing images in real-time (about 500 FPS for images of size 640x480x3 on GPU) hence we would to do real implementation of Zero-DCE, in this case implement it using DSLR camera and some input images and videos.
 
-# Goals
-<img src="https://github.com/alexivaner/Deep-Learning-Based-Radio-Signal-Classification/raw/main/Submission/Final/Kinds%20of%20Signal.png" width="500"><br>
+# Goals and Proposed Method
+<img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Our%20Improvement.jpg" width="700"><br>
 
-* Classify 24 kinds of signal and get higher accuracy in lower SNR value.
-* Design a new deep learning architecture and try to get the comparable results in terms of accuracy with state of the art or even better.
-* Create End-to-end Deep Learning Model System (using only RAW signal).
+* Previous Zero-DCE not really has correct color, we aim to do color correction for Zero-DCE.
+* If the input image already has some noise, Zero-DCE result will also has some noise, hence we would to improve the result by doing denoising at the output.
+* We add second part of SICE dataset and also our own dataset then retrain previous Zero-DCE model to get improvement in the result.
+All of improvement above is to make sure that we could use Zero-DCE for real-purpose, hence we also combine our demo with DSLR camera using NodeRED, you could see our proposed method below:<br>
 
-# Challenges
-<img src="https://github.com/alexivaner/Deep-Learning-Based-Radio-Signal-Classification/raw/main/Submission/Final/challenges.jpg" width="600"><br>
+<img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/What%20we%20do.jpg" width="700"><br>
+
 
 
 # Highlight
@@ -40,8 +41,6 @@ Find more about Zero-DCE click [here](https://li-chongyi.github.io/Proj_Zero-DCE
 Original Zero-DCE Repository click  [here](https://github.com/Li-Chongyi/Zero-DCE)<br>
 Previous repository did not use for real implementation, hence we try to use Zero-DCE in real implementation for example DSLR Camera.
 
-### Proposed Method
-<img src="https://github.com/alexivaner/Deep-Learning-Based-Radio-Signal-Classification/raw/main/Submission/Final/Proposed%20Method.jpg" width="700"><br>
 
 ### Our Result (Green Line)
 We could see that our result surpassed previous method a lot in Low SNR, from under 20% to more than 70% (We could see our result in green line surpassed baseline in Low SNR Signal) <br>
