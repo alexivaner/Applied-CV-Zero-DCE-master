@@ -3,10 +3,13 @@
  Final Project for Applied Computer Vision 2020 (Fall 2020) in National Chiao Tung University<br>
  *Best Demo Award in Applied Computer Vision 2020 (Fall 2020)*<br>
  
- Implementation from previous works:<br>
-CVPR-2020 Zero-DCE Paper click [here](https://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Zero-Reference_Deep_Curve_Estimation_for_Low-Light_Image_Enhancement_CVPR_2020_paper.pdf)<br>
+# Highlight
+We improve previous paper by implement it for real-time demo in DSLR camera and also add color correction and denoising to make the result is more suitable for real implementation. We continue the code from previous works:<br>
+* Find more about Zero-DCE click [here](https://li-chongyi.github.io/Proj_Zero-DCE.html)<br>
+* Original Zero-DCE Repository click  [here](https://github.com/Li-Chongyi/Zero-DCE)<br>
+* Paper CVPR-2020 Zero-DCE Paper click [here](https://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Zero-Reference_Deep_Curve_Estimation_for_Low-Light_Image_Enhancement_CVPR_2020_paper.pdf)<br>
+
           
- 
  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Photo%20result.jpg" width="800"><br>
 
  ## Final Demo  Reviewer
@@ -39,11 +42,6 @@ Zero-DCE is a novel method to do light enhancement in an image. We could obtain 
 
 
 
-# Highlight
-We improve previous paper by implement it for real-time demo in DSLR camera and also add color correction and denoising to make the result is more suitable for real implementation. We continue the code from previous works:<br>
-* Find more about Zero-DCE click [here](https://li-chongyi.github.io/Proj_Zero-DCE.html)<br>
-* Original Zero-DCE Repository click  [here](https://github.com/Li-Chongyi/Zero-DCE)<br>
-* Paper CVPR-2020 Zero-DCE Paper click [here](https://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Zero-Reference_Deep_Curve_Estimation_for_Low-Light_Image_Enhancement_CVPR_2020_paper.pdf)<br>
 
 
 ### Our Result (Green Line)
