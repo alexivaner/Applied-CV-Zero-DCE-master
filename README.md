@@ -1,7 +1,17 @@
 # Realtime Improvement and Real Time Demo for DSLR Camera : Zero-Reference Deep Curve Estimation for Low-Light Image Enhancement
 
  Final Project for Applied Computer Vision 2020 (Fall 2020) in National Chiao Tung University<br>
- *Best Demo Award in Applied Computer Vision 2020 (Fall 2020)*
+ *Best Demo Award in Applied Computer Vision 2020 (Fall 2020)*<br>
+ 
+ Implementation from previous works:<br>
+ @Article{Zero-DCE,
+          author = {Guo, Chunle and Li, Chongyi and Guo, Jichang and Loy, Chen Change and Hou, Junhui and Kwong, Sam and Cong Runmin},
+          title = {Zero-reference deep curve estimation for low-light image enhancement},
+          journal = {CVPR},
+          pape={1780-1789},
+          year = {2020}
+          }
+          
  
  <img src="https://github.com/alexivaner/Applied-CV-Zero-DCE-master/raw/master/readme_source/Photo%20result.jpg" width="800"><br>
 
