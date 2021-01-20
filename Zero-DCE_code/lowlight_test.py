@@ -99,12 +99,12 @@ if __name__ == '__main__':
                 img = cv2.imread(correct_path)
                 img2 = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) / 255
 
-                start_wavelet=time.time()
+                # start_wavelet=time.time()
 
-                denoise_img_wavelet = np.uint8(denoise_wavelet(img2, multichannel=True, rescale_sigma=True) * 255)
-                wavelet_path="/media/ivan/Ivan/Final Applied CV/images/result/test_img/wavelet.jpg"
-                cv2.imwrite(wavelet_path, cv2.cvtColor(denoise_img_wavelet, cv2.COLOR_RGB2BGR))
-                print("Denoise wavelet written,time: ", time.time()-start_wavelet)
+                # denoise_img_wavelet = np.uint8(denoise_wavelet(img2, multichannel=True, rescale_sigma=True) * 255)
+                # wavelet_path="/media/ivan/Ivan/Final Applied CV/images/result/test_img/wavelet.jpg"
+                # cv2.imwrite(wavelet_path, cv2.cvtColor(denoise_img_wavelet, cv2.COLOR_RGB2BGR))
+                # print("Denoise wavelet written,time: ", time.time()-start_wavelet)
 
 
                 start_opencv=time.time()
